@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="470.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mainapp.AdminController">
+   <children>
+      <TableView layoutX="358.0" layoutY="126.0" prefHeight="330.0" prefWidth="349.0" />
+      <Button layoutX="29.0" layoutY="237.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Add" />
+      <TextField layoutX="28.0" layoutY="47.0" promptText="username" />
+      <PasswordField layoutX="29.0" layoutY="107.0" promptText="password" />
+      <Button layoutX="29.0" layoutY="161.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Remove" />
+      <Button layoutX="28.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="View" />
+      <RadioButton layoutX="133.0" layoutY="203.0" mnemonicParsing="false" text="Secretary">
+         <toggleGroup>
+            <ToggleGroup fx:id="employees" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="133.0" layoutY="169.0" mnemonicParsing="false" text="Driver" toggleGroup="$employees" />
+      <RadioButton layoutX="132.0" layoutY="237.0" mnemonicParsing="false" text="Admin" toggleGroup="$employees" />
+      <TextField layoutX="436.0" layoutY="81.0" />
+      <Button layoutX="360.0" layoutY="81.0" mnemonicParsing="false" text="Add Car" />
+   </children>
+</AnchorPane>

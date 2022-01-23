@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mainapp.MainController">
+   <children>
+      <TableView fx:id="carsTable" layoutX="178.0" layoutY="176.0" prefHeight="352.0" prefWidth="514.0">
+         <columns>
+            <TableColumn fx:id="modelColumn" prefWidth="82.39996337890625" text="Model" />
+            <TableColumn fx:id="typeColumn" prefWidth="93.60003662109375" text="Type" />
+            <TableColumn fx:id="yearColumn" prefWidth="85.5999755859375" text="Year" />
+            <TableColumn fx:id="colorColumn" prefWidth="81.60006713867188" text="Color" />
+            <TableColumn fx:id="locationColumn" prefWidth="81.5999755859375" text="Location" />
+            <TableColumn fx:id="priceColumn" prefWidth="78.40008544921875" text="Price" />
+         </columns></TableView>
+      <ComboBox fx:id="locationComboBox" layoutX="410.0" layoutY="66.0" prefHeight="26.0" prefWidth="110.0" promptText="Location" />
+      <ComboBox fx:id="modelComboBox" layoutX="263.0" layoutY="66.0" prefHeight="26.0" prefWidth="109.0" promptText="Model" />
+      <Button layoutX="594.0" layoutY="67.0" mnemonicParsing="false" onAction="#filterResults" style="-fx-border-radius: 0;" text="Filter Results" />
+      <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" style="-fx-border-radius: 5; -fx-background-color: #ffcccb; -fx-border-color: #000000; -fx-background-radius: 5;" text="subscribe" textAlignment="CENTER" textFill="#695252">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="profileImageView" fitHeight="56.0" fitWidth="71.0" layoutX="750.0" layoutY="14.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../png/av.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="24.0" layoutY="488.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../png/logout.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="594.0" layoutY="115.0" mnemonicParsing="false" onAction="#viewAllCars" prefHeight="26.0" prefWidth="83.0" text="Show All" />
+      <ImageView fitHeight="66.0" fitWidth="83.0" layoutX="724.0" layoutY="176.0" onMouseClicked="#handleProceed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../png/cont.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="724.0" layoutY="242.0" prefHeight="18.0" prefWidth="71.0" text="proceed" textFill="#317b1c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" layoutX="265.0" layoutY="32.0" prefHeight="18.0" prefWidth="254.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

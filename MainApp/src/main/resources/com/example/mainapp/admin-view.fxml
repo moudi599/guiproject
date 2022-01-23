@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="470.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mainapp.AdminController">
+   <children>
+      <TableView layoutX="358.0" layoutY="126.0" prefHeight="330.0" prefWidth="349.0" />
+      <Button layoutX="29.0" layoutY="162.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Add" />
+      <TextField layoutX="28.0" layoutY="47.0" promptText="username" />
+      <PasswordField layoutX="189.0" layoutY="47.0" promptText="password" />
+      <Button layoutX="29.0" layoutY="86.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Remove" />
+      <Button layoutX="28.0" layoutY="125.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="View" />
+      <RadioButton layoutX="133.0" layoutY="128.0" mnemonicParsing="false" text="Secretary">
+         <toggleGroup>
+            <ToggleGroup fx:id="employees" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="133.0" layoutY="94.0" mnemonicParsing="false" text="Driver" toggleGroup="$employees" />
+      <RadioButton layoutX="132.0" layoutY="162.0" mnemonicParsing="false" text="Admin" toggleGroup="$employees" />
+      <Button layoutX="575.0" layoutY="85.0" mnemonicParsing="false" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="Add Car">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="53.0" fitWidth="76.0" layoutX="648.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../png/cont.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
